@@ -1,14 +1,20 @@
 #include<stdio.h>
 int main(){
 	int a; 
-	int b;
+	agains:
 	printf("Enter a: ");
 	scanf("%d", &a);
 	fflush(stdin);
-	printf("Enter b: ");
-	scanf("%d", &a);
-	printf("tong cua a va b : %d\n", a+b);
-	printf("hieu cua a va b : %d", a-b);
-
-
+	if (a == 1){
+	printf("One");
+	}else if (a == 2){
+	printf("Two");
+	}else if (a == 3){
+	printf("Three");
+	}else if (a == 4){
+		printf("Four");
+	}else {
+		printf("Can not read this number: %d", a);
+		goto agains;
+	}
 }
