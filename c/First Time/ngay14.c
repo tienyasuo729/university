@@ -1,6 +1,8 @@
 #include<stdio.h>
 #include<string.h>
 #include<math.h>
+#include<stdlib.h>
+
 
 int main(){
 	int boolean = 1;
@@ -16,6 +18,7 @@ int main(){
 	do{
 		printf("----- LUA CHON THAO TAC VOI MANG -----\n1. In ra do dai cua mang\n2. In ra mang dao nguoc\n3. Nhap vao mang 2, so sanh 2 mang\n4. Noi mang 2 vao mang 1\n5. Thoat\nNhap lua chon cua ban: ");
 		choose = checkChoose(5);
+		fflush(stdin);
 		switch(choose){
 			case 1:
 //				printf("Do dai cua mang la: %d\n", strlen(arr));
@@ -26,10 +29,11 @@ int main(){
 				printf("Mang sau khi dao nguoc la: %s\n", arr);
 				break;
 			case 3:
-				fflush(stdin);
 				printf("Nhap vao mang 2 de so sanh voi mang 1: ");
 				gets(arr2);
-				printf("%d\n", strcmp(arr, arr2));
+				fflush(stdin);
+//				soSanhSTRCMP(arr, arr2);
+				hienThiKetQuaSoSanh2Mang(arr, arr2);
 				break;
 			case 4:
 				break;
@@ -75,11 +79,30 @@ void daoNguocMang(char *arr){
 	}
 }
 
-int soSanh2Mang(char *arr, char *arr2){
-	int i;
-	int check;
-	for(i = 0; arr[i]!='\0'; i++){
-		
+void soSanhSTRCMP(char *arr, char *arr2){
+	if(strcmp(arr, arr2) == 0){
+		printf("Hai mang giong nhau.\n");
+	}else{
+		printf("Hai mang khong giong nhau.\n");
 	}
 }
 
+int soSanh2Mang(char *arr, char *arr2){
+	int i;
+	int check = 0;
+	for(i = 0; arr[i]!='\0'; i++){
+		if(arr[i] != arr2[i]){
+			check = 1;
+			break;
+		}
+	}
+	return check;
+}
+
+void hienThiKetQuaSoSanh2Mang(char *arr, char *arr2){
+	if(soSanh2Mang(arr,arr2) == 0){
+		printf("Hai mang giong nhau.\n");
+	}else{
+		printf("Hai mang khong giong nhau.\n");
+	}
+}
