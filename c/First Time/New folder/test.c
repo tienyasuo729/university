@@ -1,17 +1,7 @@
-#include <stdio.h>
-#include <ctype.h>
-
-int main() {
-   int num;
-   printf("Enter a number: ");
-//   if (scanf("%d", &num) != 1) {
-//      printf("Error: Invalid input\n");
-//      return 1;
-//   }
-//   printf("You entered: %d\n", num);
-//   return 0;
-	num = checkChoose(4);
-}
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<math.h>
 
 int checkChoose(int numberOfChoose){
 	int choose = 0;
@@ -31,3 +21,9 @@ int checkChoose(int numberOfChoose){
 			
 	return choose;
 }
+
+int main(){
+	printf("")
+}
+
+
