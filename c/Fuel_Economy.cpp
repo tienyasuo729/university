@@ -104,22 +104,21 @@ void revisedFuelEconomyCalculation(){
 int main(){
 	int check = 1;
 	while(check = 1){
-	printf("\n--- MENU ---\n1 -  Calculating Fuel Economy\n2 -  Calculating Distance Traveled\n3 - Revised Fuel Economy Calculation");
+	printf("\n--- MENU ---\n1 -  Calculating Fuel Economy\n2 -  Calculating Distance Traveled\n3 - Revised Fuel Economy Calculation\n");
 	printf("moi ban nhap lua chon cua minh: ");
-//	int choose = 
-checkChoose(3);
+	int choose = checkChoose(3);
 printf("%d",checkChoose(3));
-//		switch(choose){
-//			case 1: 
-//				calculatingFuelEconomy();
-//				break;
-//			case 2: 
-//				calculatingDistanceTraveled();
-//				break;
-//			case 3: 
-//				revisedFuelEconomyCalculation();
-//				break;
-//		}
+		switch(choose){
+			case 1: 
+				calculatingFuelEconomy();
+				break;
+			case 2: 
+				calculatingDistanceTraveled();
+				break;
+			case 3: 
+				revisedFuelEconomyCalculation();
+				break;
+		}
 	}		
 }
 
